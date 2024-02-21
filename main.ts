@@ -18,21 +18,19 @@ let answer = [
 0
 ]
 for (let index = 0; index <= 4; index++) {
-    for (let index2 = 0; index2 < 100; index2++) {
-        basic.showString("" + (question[index]))
-        basic.clearScreen()
-        if (input.buttonIsPressed(Button.A)) {
-            if (answer[index] == 1) {
-                point += 1
-            }
-            break;
+    basic.showString("" + (question[index]))
+    basic.clearScreen()
+    if (input.buttonIsPressed(Button.A)) {
+        if (answer[index] == 1) {
+            point += 1
         }
-        if (input.buttonIsPressed(Button.B)) {
-            if (answer[index] == 0) {
-                point += 1
-            }
-            break;
+        break;
+    }
+    if (input.buttonIsPressed(Button.B)) {
+        if (answer[index] == 0) {
+            point += 1
         }
+        break;
     }
 }
 basic.clearScreen()
